@@ -150,6 +150,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 #    $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.ham
@@ -210,6 +214,10 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/vendor/etc/thermal-engine-8974.conf
+
+# Thermal HIDL
+PRODUCT_PACKAGES += \
+   android.hardware.thermal@1.0-impl
 
 # USB
 PRODUCT_PACKAGES += \
