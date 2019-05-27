@@ -150,9 +150,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sysfs
 
-# Launcher
-LAWNCHAIR_OPTOUT := true
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
@@ -355,6 +352,14 @@ PRODUCT_PACKAGES += \
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.build.vendor_security_patch=2016-06-01
+
+# POSP exclusive
+#
+# Launcher
+LAWNCHAIR_OPTOUT := true
+
+# Soundpicker1.0
+SOUNDPICKER_10 := true
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)
