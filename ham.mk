@@ -361,5 +361,10 @@ LAWNCHAIR_OPTOUT := true
 # Soundpicker1.0
 SOUNDPICKER_10 := true
 
+# AOSP packages
+PRODUCT_PACKAGES += \
+    messaging \
+    Terminal
+
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)
