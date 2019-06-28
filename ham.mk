@@ -363,6 +363,7 @@ SOUNDPICKER_10 := true
 
 # AOSP packages
 PRODUCT_PACKAGES += \
+    Jelly \
     messaging \
     Terminal
 
