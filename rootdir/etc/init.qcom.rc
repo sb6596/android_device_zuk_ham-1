@@ -236,7 +236,7 @@ service charger /system/bin/charger -c
     user system
     group system graphics input
     critical
-    seclabel u:r:charger:s0
+#    seclabel u:r:charger:s0
 
 service hvdcp /vendor/bin/hvdcp
     class core
@@ -246,7 +246,7 @@ service hvdcp /vendor/bin/hvdcp
 service qbcharger /charger -m 1
     disabled
     oneshot
-    seclabel u:r:healthd:s0
+#    seclabel u:r:healthd:s0
 
 on property:sys.qbcharger.enable=true
     start qbcharger
@@ -292,7 +292,7 @@ service hciattach /vendor/bin/init.qcom.bt.sh
     user bluetooth
     group bluetooth net_bt_admin oem_2950 radio
     disabled
-    seclabel u:r:bluetooth_loader:s0
+#    seclabel u:r:bluetooth_loader:s0
     oneshot
 
 on property:vendor.bluetooth.hciattach=true
@@ -342,6 +342,6 @@ service fuse_usbdisk /vendor/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw
 service program_bdaddr /vendor/bin/init.program_bdaddr.sh
     user bluetooth
     group bluetooth
-    seclabel u:r:bluetooth_loader:s0
+#    seclabel u:r:bluetooth_loader:s0
     disabled
     oneshot
